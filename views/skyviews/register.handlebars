@@ -1,0 +1,79 @@
+ <main class="ps-main">
+<div class="container">
+    <div class="row" >
+      <div class="col-lg-12" style="text-align: center">
+        <div style="width: 500px">
+          <br>
+          <br>
+          <br>
+          <form action="/register" method="POST">
+                <div class="form-group" >
+                <label for="exampleInputname1">Name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Enter name" required>
+                
+              </div>
+               <div class="form-group">
+                <label for="exampleInputname1">Surname</label>
+                <input type="text" class="form-control" id="surname" name="surname" placeholder="Enter surname" required>
+               
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required>
+               
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="password" name="password" data-validation="length" data-validation-length="min8" placeholder="Password" required>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputConPassword1">Confirm Password</label>
+                <input type="password" class="form-control" id="confirm_password" name="password" placeholder="Confirm Password" data-validation="confirmation" required>
+              </div>
+              
+              <button style="background-color: #2AC37D" type="submit" class="btn" id="registerBtn">Register</button>
+            </form>
+        </div>
+
+      </div>
+    </div>
+
+</div>
+ </main>
+
+
+  {{!-- <script>
+    window.addEventListener("load",()=>{
+    
+      $('#registerBtn').click((e)=>{
+e.preventDefault();
+      var user={
+        name:$("#name").val(),
+        surname:$("#surname").val(),
+        email:$("#email").val(),
+        password:$("#password").val()
+      
+      };
+     //console.log(user);
+
+
+
+           $.ajax({
+         url:'/register',
+        type:'POST',
+        data:{user},
+        success:(response)=>{
+           if(response)
+             console.log(response);
+             else
+               console.log('user not registered');
+        }
+       
+      });
+      });
+
+
+
+    });
+
+  </script> --}}

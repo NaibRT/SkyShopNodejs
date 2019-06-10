@@ -1,0 +1,55 @@
+
+     <div class="container">
+       <div class="row">
+         <div class="col-md-12">
+<a id="mainCatCreate" href="/admin/create-main-category/" class="btn btn-primary" role="button">Create</a>
+
+               <table 
+               class="table-bordered"
+               data-toggle="table"     
+               data-pagination="true"
+               data-search="true"
+               data-sortable="true" 
+               data-sort-class="table-active"
+               data-side-pagination="server"
+              
+              >
+      <thead class="thead-dark">
+        <tr>
+          <th data-sortable="true">_ID</th>
+          <th data-sortable="true">ID</th>
+          <th data-sortable="true">Item Name</th>
+          <th data-sortable="true">Created Date</th>
+          <th>Status</th>
+          <th>Operations</th>
+
+        </tr>
+      </thead>
+      <tbody id="t-body">
+        {{#each data}}
+        <tr>
+          <td>{{this._id}}</td>
+          <td>{{this.id}}</td>
+          <td>{{this.name}}</td>
+          <td>{{this.createdDate}}</td>
+          <td>{{this.status}}</td>
+          <td style="text-align: center; ">
+            <a class="like edit" data_id="{{this._id}}"  data_path="/admin/delete-main-category" title="Edit">
+              Edit
+              <i class="fas fa-edit"></i>
+            </a>  
+          
+           <a style="color: red" class="remove" data_id="{{this._id}}"  data_path="/admin/delete-main-category" title="Remove">
+             delete
+                <i class="fa fa-trash"></i>
+            </a>
+          </td>
+        </tr>
+        {{/each}}
+
+      </tbody>
+    </table>
+         </div>
+       </div>
+     </div>
+

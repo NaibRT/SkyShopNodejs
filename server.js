@@ -9,7 +9,7 @@ const adminRouts=require('./routs/admin');
 const mongoose=require('mongoose');
 const app=new express();
 
-mongoose.connect('mongodb://localhost:27017/skyshopdb',{ useNewUrlParser: true})
+mongoose.connect('mongodb://localhost:27017/skyshopdb',{ useNewUrlParser: true,useCreateIndex:true})
 .then(res =>{console.log('Mongodb connected');})
 .catch(err =>{console.log('mongodb connected error');});
 require('events').EventEmitter.prototype._maxListeners = 100;

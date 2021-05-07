@@ -14,7 +14,7 @@
     "bootstrap-table": "^1.14.2",
     "express": "^4.16.4",
     "express-handlebars": "^3.1.0",
-    "handlebars": "^4.1.2",
+    "handlebars": "^4.7.7",
     "jquery": "^3.4.1",
     "jquery-form-validator": "^2.3.79",
     "jquery-validation": "^1.19.0",
